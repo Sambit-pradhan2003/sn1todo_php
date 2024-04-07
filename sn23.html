@@ -1,0 +1,19 @@
+<script>
+    $(document).ready(function(){
+        var jsVariable = "Hello from JavaScript"; // Your JavaScript variable
+        
+        // AJAX request
+        $.ajax({
+            url: 'welcome.php', // PHP script path
+            type: 'post',
+            data: {jsVariable: jsVariable}, // Send JavaScript variable to PHP
+            success: function(response) {
+                console.log(response); // Log the response from PHP
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText); // Log any errors
+            }
+        });
+    });
+    </script>
+    
