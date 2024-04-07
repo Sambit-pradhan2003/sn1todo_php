@@ -1,11 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pass JavaScript Variable to PHP via AJAX</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
         var jsVariable = "Hello from JavaScript"; // Your JavaScript variable
         
         // AJAX request
         $.ajax({
-            url: 'welcome.php', // PHP script path
-            type: 'post',
+            url: 'http://localhost/sn/welcome.php', // PHP script path
+            type: 'POST',
             data: {jsVariable: jsVariable}, // Send JavaScript variable to PHP
             success: function(response) {
                 console.log(response); // Log the response from PHP
@@ -16,4 +23,10 @@
         });
     });
     </script>
+    
+</head>
+<body>
+</body>
+</html>
+
     
