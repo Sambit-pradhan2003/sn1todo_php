@@ -62,6 +62,7 @@
     </div>
     <button type="submit">add note</button>
    </form> 
+   
    <div>
     <?php 
         echo "hello <br>";
@@ -69,6 +70,8 @@
         $results = mysqli_query($conn, $sqls);
         while ($row = mysqli_fetch_assoc($results)) {
             echo $row['slno'] . " :      " . $row['titale'] . " :       " . $row['text'];    
+            echo '       <a href="/del">delete</a>     <a href="/edit">edit</a>';
+            
             echo '<br>';
         }
     ?>
